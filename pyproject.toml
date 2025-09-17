@@ -1,0 +1,40 @@
+[build-system]
+requires = ["setuptools>=42", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "budget-tracker"
+version = "0.1.0"
+description = "A terminal-based budget tracker"
+readme = "README.md"
+requires-python = ">=3.8"
+dependencies = [
+    "rich>=13.7.0",
+    "sqlalchemy>=2.0.0",
+    "typer[all]>=0.9.0",
+    "python-dateutil>=2.8.2"
+]
+
+[project.scripts]
+budget = "budget_tracker.cli:main"
+
+# PyInstaller configuration
+[tool.pyinstaller]
+console-script = "budget"
+onefile = true
+name = "budget-tracker"
+add-data = [
+    "budget_tracker/*.py;budget_tracker",
+    "budget_tracker/__init__.py;budget_tracker"
+]
+hidden-imports = [
+    "budget_tracker.database",
+    "budget_tracker.transactions",
+    "budget_tracker.budgets",
+    "budget_tracker.reports",
+    "budget_tracker.settings",
+    "budget_tracker.utils",
+    "sqlalchemy",
+    "rich",
+    "typer"
+]
