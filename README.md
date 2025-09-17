@@ -34,7 +34,6 @@ Install dependencies:
 ```bash
 pip install -r requirements.txt
 pip install -e .
-
 pip install "click<8.1.0" "typer==0.4.1"
 pip install --upgrade typer click
 ```
@@ -46,7 +45,30 @@ python -m budget_tracker.main
 # or use the shorthand
 budget
 ```
-Alternativelly use the .exe file in the releases.
+
+Alternatively, use the `.exe` file from the releases.
+
+---
+
+## Windows Usage
+
+1. Download the `budget.exe` file from the latest release
+2. Open Command Prompt or PowerShell
+3. Navigate to where you downloaded the file
+4. Run the application with commands like:
+
+```bash
+budget.exe --help
+budget.exe add expense 25.00 Food "Lunch"
+budget.exe list
+budget.exe summary
+```
+
+### Quick Start (Double-Click Method)
+
+If you double-click the executable, it will open a command window showing the welcome message.  
+To use the application effectively, run it from an already open command prompt.
+
 ---
 
 ## Usage
@@ -93,5 +115,3 @@ budget export --filename my_finances.csv
 ## Author
 
 Developed and maintained by **Nullsec0x**.
-
-
