@@ -1,0 +1,9 @@
+# .replit
+
+run = "budget"
+
+language = "python3"
+
+[packager]
+  [packager.pip]
+    install = ["-r", "requirements.txt"]
