@@ -34,6 +34,9 @@ Install dependencies:
 ```bash
 pip install -r requirements.txt
 pip install -e .
+
+pip install "click<8.1.0" "typer==0.4.1"
+pip install --upgrade typer click
 ```
 
 Run the application:
@@ -90,4 +93,5 @@ budget export --filename my_finances.csv
 ## Author
 
 Developed and maintained by **Nullsec0x**.
+
 
