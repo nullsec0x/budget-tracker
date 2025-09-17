@@ -33,6 +33,7 @@ Install dependencies:
 
 ```bash
 pip install -r requirements.txt
+pip install -e .
 ```
 
 Run the application:
@@ -89,3 +90,4 @@ budget export --filename my_finances.csv
 ## Author
 
 Developed and maintained by **Nullsec0x**.
+
